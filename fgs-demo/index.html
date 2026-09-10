@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repeato — foreground service demo</title>
+  <style>
+    body {
+      max-width: 40rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font: 1rem/1.6 system-ui, sans-serif;
+      color: #1a1a1a;
+    }
+    h1 { font-size: 1.4rem; }
+    video { width: 100%; max-height: 80vh; background: #000; border-radius: 8px; }
+    .meta { color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Repeato — foreground service (SPECIAL_USE)</h1>
+  <p class="meta">
+    Demonstration for the Google Play foreground service permission declaration
+    (<code>FOREGROUND_SERVICE_SPECIAL_USE</code>).
+  </p>
+
+  <video controls playsinline preload="metadata" src="foreground-service-demo.mp4"></video>
+
+  <p>
+    The recording shows an "alarm"-style reminder the user scheduled. With the app in the
+    background and the phone locked, the reminder fires at its exact time: a foreground service
+    plays the alarm tone and vibration and keeps the full-screen alarm on screen until the user
+    dismisses it. Repeato holds <code>SCHEDULE_EXACT_ALARM</code>; this is the Play policy
+    scenario for apps that use a foreground service to continue alarms in the background.
+  </p>
+</body>
+</html>
